@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // call getBufferString to get the string from the buffer.
 
                 String coinValueJsonString = getBufferStringFromBuffer(reader).toString();
-                Log.d("Price",res);
 
                 // call a method to parse the json data and return a string.
                 res =  handler.getCoinValue(coinValueJsonString);
