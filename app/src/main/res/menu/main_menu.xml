@@ -1,13 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <item
         android:id="@+id/action_copy"
-        android:title="Copy"
+        android:title="@string/copy"
         android:icon="@mipmap/ic_copy_round"
-        app:showAsAction="always">
+        app:showAsAction="never">
+
+    </item>
+
+    <item android:id="@+id/action_share"
+        android:title="@string/action_share"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider" />
+    <item
+        android:id="@+id/media_route_menu_item"
+        android:orderInCategory="3"
+        android:title="@string/cast"
+        app:actionProviderClass="android.support.v7.app.MediaRouteActionProvider"
+        app:showAsAction="never"
+        tools:icon="@drawable/mr_button_light" />
+
+    <item
+        android:id="@+id/help_menu"
+        android:title="@string/help"
+        android:orderInCategory="4"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/change_background_color"
+        android:title="@string/change_background_color"
+        android:orderInCategory="5"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item android:id="@+id/originalButton"
+                android:title="@string/original"
+                />
+            <item android:id="@+id/blackButton"
+                android:title="@string/black"
+                />
+            <item android:id="@+id/blueButton"
+                android:title="@string/blue"
+                />
+            <item android:id="@+id/yellowButton"
+                android:title="@string/yellow"
+                />
+            <item android:id="@+id/redButton"
+                android:title="@string/red"
+                />
+
+        </menu>
 
     </item>
 

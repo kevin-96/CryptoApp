@@ -3,19 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:backgroundTint="@color/colorPrimaryDark"
-    tools:context=".MainActivity">
+    android:id="@+id/main_layout"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#393D48">
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="176dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="176dp"
-        android:text="Cryptocurrency Status"
-        android:textSize="30sp"
+    <include
+        android:id="@+id/include2"
+        layout="@layout/toolbar_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,6 +21,8 @@
         android:layout_height="50dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:textColor="#E4E4E4"
+        android:popupBackground="#54575A"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
 
@@ -37,21 +34,21 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:onClick="onClick"
-        android:text="Get Price"
+        android:text="@string/get_price"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/coinSpinner" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="318dp"
-        android:layout_height="346dp"
+        android:layout_width="299dp"
+        android:layout_height="313dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/include2"
         app:srcCompat="@drawable/crypto" />
 
     <Spinner
@@ -60,78 +57,10 @@
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:popupBackground="#54575A"
+        android:textColor="#E4E4E4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
-
-    <!--<EditText-->
-        <!--android:id="@+id/editText"-->
-        <!--android:layout_width="106dp"-->
-        <!--android:layout_height="50dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:ems="10"-->
-        <!--android:inputType="number"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/convertTextView" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/convertTextView"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="40dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="Currency Convert:"-->
-        <!--android:textSize="24sp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.0"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/getPriceButton" />-->
-
-    <!--<TextView-->
-        <!--android:id="@+id/toTextView"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="40dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="To"-->
-        <!--android:textSize="24sp"-->
-        <!--app:layout_constraintEnd_toStartOf="@+id/spinner4"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/spinner3"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/convertTextView" />-->
-
-    <!--<Spinner-->
-        <!--android:id="@+id/spinner3"-->
-        <!--android:layout_width="85dp"-->
-        <!--android:layout_height="47dp"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginBottom="8dp"-->
-        <!--app:layout_constraintBottom_toBottomOf="@+id/editText"-->
-        <!--app:layout_constraintStart_toEndOf="@+id/editText"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/convertTextView" />-->
-
-    <!--<Spinner-->
-        <!--android:id="@+id/spinner4"-->
-        <!--android:layout_width="100dp"-->
-        <!--android:layout_height="47dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/convertTextView" />-->
-
-    <!--<Button-->
-        <!--android:id="@+id/convertButton"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginStart="8dp"-->
-        <!--android:layout_marginTop="8dp"-->
-        <!--android:layout_marginEnd="8dp"-->
-        <!--android:text="Convert"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/spinner3" />-->
 
     <TextView
         android:id="@+id/priceTextView"
@@ -140,8 +69,9 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="Get Actual Price:"
+        android:text="@string/get_actual_price"
         android:textSize="24sp"
+        android:textColor="#E4E4E4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,21 +84,11 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="in"
+        android:text="@string/in"
+        android:textColor="#E4E4E4"
         android:textSize="24sp"
         app:layout_constraintEnd_toStartOf="@+id/currencySpinner"
         app:layout_constraintStart_toEndOf="@+id/coinSpinner"
         app:layout_constraintTop_toBottomOf="@+id/priceTextView" />
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/colorPrimary"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

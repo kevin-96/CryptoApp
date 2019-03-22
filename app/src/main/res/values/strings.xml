@@ -1,3 +1,16 @@
 <resources>
-    <string name="app_name">CryptoUSD</string>
+    <string name="app_name">Crypto-Stats</string>
+    <string name="action_share">Share</string>
+    <string name="cast">Cast</string>
+    <string name="copy">Copy</string>
+    <string name="get_price">Get Price</string>
+    <string name="get_actual_price">Get Actual Price:</string>
+    <string name="in">in</string>
+    <string name="change_background_color">Change Background Color</string>
+    <string name="help">Help</string>
+    <string name="original">Original</string>
+    <string name="black">Black</string>
+    <string name="blue">Blue</string>
+    <string name="yellow">Yellow</string>
+    <string name="red">Red</string>
 </resources>
